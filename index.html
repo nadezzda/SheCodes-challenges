@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/82eadae9e2.js" crossorigin="anonymous"></script>
     <title>Kharkiv</title>
+    <meta name="description" content="This website is made as a challenge project from she is coding. He gives information to a city in Ukraine called Kharkiv, you can see photos and get acquainted with interesting facts about him.">
     <style>
         .all-general-info {
             background-image: url("./F4LqHrejO8ZiN5-TfOhy5LPF6EXO6LuW.jpg");
@@ -75,6 +76,9 @@
             padding-left: 30px;
             max-width: 600px;
         } 
+        .badDescription .btn {
+            background-color: black;
+        }
         .btn {
             border: 1px solid rgb(224, 166, 60);
             padding: 5px 30px;
@@ -303,9 +307,6 @@
        .badDescription p {
         padding: 5px;
        }
-       .badDescription .btn {
-        background-color: black;
-       }
        .btn {
         padding: 3px 15px;
         font-size: 8px;
@@ -395,9 +396,9 @@
         document.querySelector("body").style["background"] = "linear-gradient(180deg, rgb(203, 202, 199) 0%, rgb(50, 49, 49) 100%)";
         document.querySelector(".all-general-info").style["background-image"] = "url(https://war.ukraine.ua/wp-content/uploads/2022/04/russia_ukraine_war_day_in_photos_13857-1050_x2.jpg)";
         let navigation = document.querySelector("nav");
-        navigation.innerHTML = `<button class="but"><a href="#badFacts" class="navLink">Terrible facts</a></button>
-            <button class="but"><a href="#gallery" class="navLink">Gallery</a></button>
-            <button class="but"><a href="#" onclick="changeBack()" class="navLink">Come back</a></button>`;
+        navigation.innerHTML = `<button class="but"><a href="#badFacts" class="navLink" title="Link to terrible facts about Kharkiv during the war">Terrible facts</a></button>
+            <button class="but"><a href="#gallery" class="navLink" title="Link to photo from Kharkiv">Gallery</a></button>
+            <button class="but"><a href="#" onclick="changeBack()" class="navLink" title="Link to the page with beautiful and peaceful Kharkiv">Come back</a></button>`;
         let description = document.querySelector(".description");
         description.innerHTML = `<h2>CITY OF MY HEART</h2>
             <div class="badDescription">
@@ -407,7 +408,7 @@
                     </div>
                     <div class="col">
                         <p>During the large-scale Russian invasion of 2022, Kharkiv was <span>heavily bombed</span>. Despite the assurances of the Russian authorities not to fire on <span>non-military objects</span>, enemy forces continued to purposefully destroy <span>civilian infrastructure</span>.</p>
-                        <button class="btn"><a href="https://en.wikipedia.org/wiki/Battle_of_Kharkiv_(2022)" target="_blank">Learn more...</a></button>
+                        <button class="btn"><a href="https://en.wikipedia.org/wiki/Battle_of_Kharkiv_(2022)" target="_blank" title="Link to the Wiki article about battle of Kharkiv in 2022">Learn more...</a></button>
                     </div>
                 </div>`;
         let fact = document.querySelector("#facts");
@@ -448,13 +449,13 @@
 
     }
     function changeBack() {
-        alert(`You can come back to the page with Kharkov, but the reality is that the city will not be able to "come back" and be like before. Think about it`);
+        alert(`You can come back to the page with beautiful, peaceful Kharkiv, but the reality is that the city will not be able to "come back" and be like before. Think about it`);
         document.querySelector("body").style["background"] = "linear-gradient(181deg, rgb(254, 246, 231) 27%, rgb(138, 158, 156) 100%)";
         document.querySelector(".all-general-info").style["background-image"] = "url(./F4LqHrejO8ZiN5-TfOhy5LPF6EXO6LuW.jpg)"; 
         let navigation = document.querySelector("nav");
-        navigation.innerHTML = `<a href="#facts" class="navLink">Facts</a>
-            <a href="#gallery" class="navLink">Gallery</a>
-            <a href="#" onclick="change()" class="navLink"><i class="fa-regular fa-eye"></i></a>`;
+        navigation.innerHTML = `<a href="#facts" class="navLink" title="Link to the interesting facts about Kharkiv">Facts</a>
+            <a href="#gallery" class="navLink" title="Link to photo from Kharkiv">Gallery</a>
+            <a href="#" onclick="change()" class="navLink" title="Link to the page war in Kharkiv"><i class="fa-regular fa-eye"></i></a>`;
         let description = document.querySelector(".description");
         description.innerHTML = `<h2>CITY OF MY HEART</h2>
             <div class="row">
@@ -464,7 +465,7 @@
                 <div class="col">
                     <p>The generally accepted date of Kharkiv's founding is <span>1654</span>, when <span>Ukrainian Cossacks</span> led by I. Karkach built a fortified settlement on the plateau surrounded by the Kharkiv River and the Lopan River. Kharkiv's name is most likely derived from the <span>Kharkiv River</span>. According to popular legend, the city is named after <span>a Cossack, Kharko</span>.<br>
                         If you want to know more about Kharkiv present days, click on the last link in the navigation.</p>
-                    <button class="btn"><a href="https://en.wikipedia.org/wiki/Kharkiv" target="_blank">Learn more...</a></button>
+                    <button class="btn"><a href="https://en.wikipedia.org/wiki/Kharkiv" target="_blank" title="Link to the article about kharkiv">Learn more...</a></button>
                 </div>
             </div>`;
         let fact = document.querySelector("#facts");
